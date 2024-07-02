@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+</head>
+<body>
+    <h1>Bill</h1>
+    <div id="billResult"></div>
+    <a href="index.html">index</a>
+
+    <script>
+        // Retrieve the result from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const result = urlParams.get('result');
+        
+        // Display the result
+        document.getElementById("billResult").innerText = "Total Bill: " + result;
+    </script>
+</body>
+</html>
+

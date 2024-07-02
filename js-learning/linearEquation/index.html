@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve Linear Equations</title>
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Solve Linear Equations</h1>
+    <form id="equations-form">
+        <table id="equations-table">
+            <tr>
+                <th>Equation</th>
+                <th>Coefficient 1</th>
+                <th>Coefficient 2</th>
+                <th>Coefficient 3</th>
+                <th>Constant</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="number" step="any" name="a1" required></td>
+                <td><input type="number" step="any" name="b1" required></td>
+                <td><input type="number" step="any" name="c1" required></td>
+                <td><input type="number" step="any" name="d1" required></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="number" step="any" name="a2" required></td>
+                <td><input type="number" step="any" name="b2" required></td>
+                <td><input type="number" step="any" name="c2" required></td>
+                <td><input type="number" step="any" name="d2" required></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="number" step="any" name="a3" required></td>
+                <td><input type="number" step="any" name="b3" required></td>
+                <td><input type="number" step="any" name="c3" required></td>
+                <td><input type="number" step="any" name="d3" required></td>
+            </tr>
+        </table>
+        <button type="submit">Solve</button>
+    </form>
+    <div id="solution"></div>
+</body>
+</html>

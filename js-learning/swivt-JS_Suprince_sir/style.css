@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    width: 0;
+    box-sizing: border-box;
+}
+
+#dogs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 60px;
+    gap: 10px;
+    width: 1500px;
+}
+
+#dog-select {
+    width: 200px;
+    height: 50px;
+}
+
+#dogs img{
+    border: 1px solid black;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+}
+

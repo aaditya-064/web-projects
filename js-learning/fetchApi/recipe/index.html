@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch: API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background: #ebecf0">
+    <div class="p-3">
+      <div
+        id="loader"
+        class="spinner-border position-absolute top-50 start-50"
+        role="status"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div
+        id="contents"
+        class="mx-auto p-4 d-none"
+        style="width: 600px; background: white"
+      >
+        <h5 id="recipeTitle_" class="fs-2"></h5>
+        <p id="recipeTags"></p>
+        <img
+          src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"
+          class="object-fit-cover bg-primary"
+          alt="Spicy Arrabiata Penne"
+          width="100%"
+          height="300px"
+        />
+        <div class="row mt-5">
+          <!-- <p>
+              <span id="recipeCategory"></span>, <span id="recipeArea"></span>
+            </p> -->
+          <div class="col-5 modifiedFont_ text-center">
+            <p class="text-uppercase">ingredients</p>
+            <ul id="recipeIngredientsWithMeasure"></ul>
+          </div>
+          <div class="col-7 border-start border-dark border-3">
+            <div class="modifiedFont_">
+              <p class="text-uppercase">directions</p>
+              <p id="recipeInstructions_" class=""></p>
+            </div>
+          </div>
+          <div class="col-12">
+            <a
+              href="https://www.youtube.com/watch?v=1IszT_guI08"
+              class="text-center btn btn-primary"
+              >Go to YouTube</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
