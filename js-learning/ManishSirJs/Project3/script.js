@@ -30,6 +30,16 @@ class movieManager {
   sortByRating(callback) {
     return this.movies.sort(callback);
   }
+  deleteMovie(title){
+    // const title = this.title.toLowerCase();
+    const deletedMovie = this.movies.find((movie) => movie.title.toLowerCase() === title.toLowerCase())
+    // console.log(this.movies.splice(this.movies.indexOf(deletedMovie), 1))
+    this.movies.splice(this.movies.indexOf(deletedMovie), 1)
+  }
+  searchMovie(title){
+    const searchMovie = 'jello world'
+    
+  }
 }
 
 // function filterByRating(minRating) {
@@ -78,4 +88,8 @@ const filteredMovies = subMovie.filterMovie(ratingFilter(7));
 // console.log(filteredMovies);
 const sortMovies = subMovie.sortByRating(sortRating("dec"));
 console.log("Printing in ascending order");
+// console.log("Deleting RRR movie")
+subMovie.deleteMovie("KGF 3")
 sortMovies.forEach((movie) => console.log(movie.getDetails()));
+// console.log("Selected Movie", selectedMovie)
+
