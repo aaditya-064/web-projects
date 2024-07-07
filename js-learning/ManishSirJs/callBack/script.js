@@ -41,7 +41,6 @@ function display() {
 }
 
 document.querySelector("#clickButton").addEventListener("click", display);
-
 // higher order function
 // ForEach(),
 // Map(),

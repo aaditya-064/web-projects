@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="controller.js" type="module"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>User List</h1>
+      <form id="user-form">
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter username"
+          required
+        />
+        <input type="text" id="userId" placeholder="Enter userId" />
+        <button type="submit">Add User</button>
+      </form>
+      <ul id="user-list"></ul>
+    </div>
+  </body>
+</html>
