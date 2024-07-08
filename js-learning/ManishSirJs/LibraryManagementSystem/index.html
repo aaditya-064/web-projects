@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container mt-2">
+      <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center gap-1">
+          <select
+            class="form-select mb-2"
+            aria-label="Default select example"
+            style="width: 70px; height: 35px"
+          >
+            <option data-val="10" selected>10</option>
+            <option data-val="20">20</option>
+            <option data-val="30">30</option>
+            <option data-val="63">All</option>
+          </select>
+          <p class="text-light fs-6">records per page</p>
+        </div>
+        <div>
+          <form class="input_Form">
+            <input
+              type="search"
+              id="search_input"
+              aria-label="First name"
+              class="form-control"
+              style="width: 150px"
+              placeholder="Search by title"
+            />
+          </form>
+        </div>
+      </div>
+      <table
+        class="table table-dark container mt-1 table-hover text-center rounded"
+      >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Year</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
