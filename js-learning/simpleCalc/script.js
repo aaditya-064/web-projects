@@ -1,54 +1,58 @@
 // const currentForm = document.querySelector("#main_form")
-const firstInput = document.querySelector("#firstNumber")
-const secondInput = document.querySelector("#secondNumber")
-const result = document.querySelector("#result")
+const firstInput = document.querySelector("#firstNumber");
+const secondInput = document.querySelector("#secondNumber");
+const result = document.querySelector("#result");
 const addButton = document.querySelector("#add");
 const subtractButton = document.querySelector("#subtract");
 const multiplyButton = document.querySelector("#multiply");
 const divideButton = document.querySelector("#divide");
 const deleteButton = document.querySelector("#delete");
-
+const outputRes = document.querySelector("#output_res");
 
 // function numbers() {
 //     const a = parseInt(firstInput.value);
 //     const b = parseInt(secondInput.value);
 // }
 
-addButton.addEventListener("click", () =>{
-    const a = parseInt(firstInput.value);
-    const b = parseInt(secondInput.value);
+for (let i = 0; i <= 2000; i++) {
+  outputRes.innerHTML += "🤡";
+}
 
-    const sum = a + b;    
-    // console.log(sum)
-    result.innerHTML = `The addition is ${sum}`;
-})
+addButton.addEventListener("click", () => {
+  const a = parseInt(firstInput.value);
+  const b = parseInt(secondInput.value);
 
-subtractButton.addEventListener("click", () =>{
-    const a = parseInt(firstInput.value);
-    const b = parseInt(secondInput.value);
-    const difference = a - b;    
-    // console.log(difference)
-    result.innerHTML = `The subtraction is ${difference}`;
-})
+  const sum = a + b;
+  // console.log(sum)
+  result.innerHTML = `The addition is ${sum}`;
+});
 
-multiplyButton.addEventListener("click", () =>{
-    const a = parseInt(firstInput.value);
-    const b = parseInt(secondInput.value);
-    const multiply = a * b;    
-    // console.log(multiply)
-    result.innerHTML = `The multiplication is ${multiply}`;
-})
+subtractButton.addEventListener("click", () => {
+  const a = parseInt(firstInput.value);
+  const b = parseInt(secondInput.value);
+  const difference = a - b;
+  // console.log(difference)
+  result.innerHTML = `The subtraction is ${difference}`;
+});
 
-divideButton.addEventListener("click", () =>{
-    const a = parseInt(firstInput.value);
-    const b = parseInt(secondInput.value);
-    const divide = a / b;    
-    // console.log(divide)
-    result.innerHTML = `The division is ${divide}`;
-})
+multiplyButton.addEventListener("click", () => {
+  const a = parseInt(firstInput.value);
+  const b = parseInt(secondInput.value);
+  const multiply = a * b;
+  // console.log(multiply)
+  result.innerHTML = `The multiplication is ${multiply}`;
+});
 
-deleteButton.addEventListener("click", () =>{
-    firstInput.value = " "
-    secondInput.value = " "
-    result.innerHTML= " "
-})
+divideButton.addEventListener("click", () => {
+  const a = parseInt(firstInput.value);
+  const b = parseInt(secondInput.value);
+  const divide = a / b;
+  // console.log(divide)
+  result.innerHTML = `The division is ${divide}`;
+});
+
+deleteButton.addEventListener("click", () => {
+  firstInput.value = " ";
+  secondInput.value = " ";
+  result.innerHTML = " ";
+});

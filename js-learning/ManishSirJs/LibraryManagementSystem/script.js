@@ -11,6 +11,7 @@ class Library {
     const JSONres = await req.json();
     this.bookDetails = JSONres.data;
     this.displayBooks(this.bookDetails);
+    this.sortByYear(this.bookDetails);
   }
   displayBooks(books) {
     tableBody.innerHTML = "";
@@ -36,6 +37,13 @@ class Library {
       this.displayBooks(filteredBooks);
     });
   }
+  sortByYear(sort) {
+    const sortBy = this.bookDetails.sort((a, b) => {
+      return b.Year - a.Year;
+    });
+    console.log(sortBy);
+    this.displayBooks(sortBy);
+  }
   // inputForm.addEventListener("input", (e) => {
   //   e.preventDefault();
   //   const userInput = e.target.value.toLowerCase(); // Convert user input to lowercase for case-insensitive search
@@ -49,6 +57,7 @@ class Library {
 const myLibrary = new Library();
 myLibrary.getDetails();
 myLibrary.searchByTitle();
+myLibrary.sortByYear();
 
 // console.log(selectBox);
 selectBox.addEventListener("change", () => {
